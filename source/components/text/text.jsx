@@ -1,0 +1,47 @@
+import React from 'react';
+import cn from 'classnames';
+import PropTypes from 'prop-types';
+
+import Icon from '../icon';
+
+const themes = {
+  default: 'default',
+  quote: 'quote'
+};
+
+const Text = ({ children, className, theme, quoteSource }) => (
+  <div
+    className={cn(
+      'text',
+      {
+        [`text--${themes[theme]}`]: themes[theme],
+        'text--has-source': quoteSource
+      },
+      className
+    )}
+  >
+    {theme === themes.quote && (
+      <Icon title="fas fa-quote-left" size={Icon.sizes.small} />
+    )}
+    <p className="text__content">{children}</p>
+    {quoteSource && <div className="text__source">({quoteSource})</div>}
+  </div>
+);
+
+Text.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.arrayOf(PropTypes.node)
+  ]).isRequired,
+  theme: PropTypes.string,
+  quoteSource: PropTypes.string
+};
+
+Text.defaultProps = {
+  theme: themes.default
+};
+
+Text.themes = themes;
+
+export default Text;

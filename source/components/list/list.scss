@@ -1,0 +1,12 @@
+.list {
+  &--inline {
+    .list__item {
+      display: inline-block;
+      margin-right: 1rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

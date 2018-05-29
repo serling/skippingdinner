@@ -1,0 +1,17 @@
+.heading {
+  font-family: "Montserrat", sans-serif;
+  margin: 0 0 0.5rem 0;
+
+  &__bloated {
+    font-size: 1.3em;
+  }
+
+  &__crooked {
+    display: inline-block;
+    transform: rotate(-5deg);
+  }
+
+  &__italic {
+    font-style: italic;
+  }
+}

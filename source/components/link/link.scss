@@ -1,0 +1,32 @@
+.link {
+  color: inherit;
+  text-decoration: none;
+  font-size: 1.2rem;
+
+  &__icon {
+    transition: all 0.1s ease-out;
+    vertical-align: middle;
+  }
+
+  &:hover {
+    .link__icon {
+      margin-left: 0.5em;
+    }
+  }
+
+  &--default {
+    .link__icon {
+      margin-left: 0.15em;
+    }
+  }
+
+  &--underlined {
+    .link__text {
+      border-bottom: 2px solid #ff0000ab;
+      font-style: italic;
+    }
+    .link__icon {
+      margin-left: 0.15em;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.title {
+  font-weight: 400;
+  margin: 0 0 1rem 0;
+  font-family: "Montserrat", sans-serif;
+
+  &--hidden {
+    @include visually-hidden;
+  }
+}

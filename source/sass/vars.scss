@@ -1,0 +1,21 @@
+$primary-color: #daf7d0;
+$secondary-color: #cdcde6;
+
+$text-font: "Open Sans";
+$heading-font: "Montserrat";
+
+@mixin heading-font {
+  font-family: $heading-font, "sans-serif";
+}
+
+@mixin text-font {
+  font-family: $text-font, "sans-serif";
+}
+
+@mixin visually-hidden {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -999em;
+  overflow: hidden;
+}
