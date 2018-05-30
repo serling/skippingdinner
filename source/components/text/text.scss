@@ -2,6 +2,16 @@
   @include text-font;
   font-size: 1.2rem;
   margin: 0;
+  display: block;
+
+  // .text {
+  //   display: inline;
+  //   line-height: 1;
+  // }
+
+  &__content {
+    display: inline;
+  }
 
   &__source {
     text-align: right;
@@ -18,5 +28,8 @@
 
   &--style-handwritten {
     @include handwritten-font;
+    color: $tertiary-color;
+    font-size: 1.4rem;
+    line-height: 1;
   }
 }

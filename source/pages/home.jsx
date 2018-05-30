@@ -14,7 +14,7 @@ const Home = () => (
       <Row.Content>
         <div>
           <Title>Skipping Dinner Improv</Title>
-          <Transform>
+          <Transform rotate={4} translate={{ x: '15rem', y: '-2.5rem' }}>
             <Text theme={Text.themes.handwritten}>we make comedy</Text>
           </Transform>
         </div>
@@ -46,7 +46,8 @@ const Home = () => (
             We offer tailored comedy shows, primarily through improv theater,
             stand-up, and presentations. Great for bringing friends together
             outside or in the workplace — at a conference, event or party. You
-            might even learn a little something about yourself. Or not.
+            might even learn a little something about yourself.{' '}
+            <span className="text--style-handwritten">Or not...</span>
           </Text>
         </div>
       </Row.Content>
@@ -69,10 +70,10 @@ const Home = () => (
             happen?
           </Heading>
           <Text>
-            Our business is flexible by nature, and requires very little on your
-            part. We do the heavy lifting, whether you need a 30-minute spot
-            next month or a full evening of comedy this coming week. Send us a
-            message or buy us a cup of coffee. Either way,{' '}
+            Our business is flexible by nature. We do the heavy lifting, whether
+            you need a 30-minute spot next month or a full evening of comedy
+            this coming week. Send us a message or buy us a cup of coffee.
+            Either way,{' '}
             <Link
               href="mailto:skippingdinnerimprov@gmail.com"
               text="let's talk"

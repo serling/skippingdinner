@@ -22,7 +22,7 @@
 
   &--underlined {
     .link__text {
-      border-bottom: 2px solid #ff0000ab;
+      border-bottom: 2px solid $tertiary-color;
       font-style: italic;
     }
     .link__icon {
