@@ -8,11 +8,15 @@
     margin-top: 1rem;
   }
 
-  &--quote {
+  &--style-quote {
     .text__content {
       font-style: italic;
       font-size: 1.8rem;
       line-height: 1.5;
     }
+  }
+
+  &--style-handwritten {
+    @include handwritten-font;
   }
 }

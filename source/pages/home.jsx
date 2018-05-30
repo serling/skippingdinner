@@ -6,6 +6,7 @@ import Text from '../components/text';
 import Link from '../components/link';
 import Title from '../components/title';
 import Row from '../components/row';
+import Transform from '../components/transform';
 
 const Home = () => (
   <Page>
@@ -13,7 +14,9 @@ const Home = () => (
       <Row.Content>
         <div>
           <Title>Skipping Dinner Improv</Title>
-          <div>we do comedy shows</div>
+          <Transform>
+            <Text theme={Text.themes.handwritten}>we make comedy</Text>
+          </Transform>
         </div>
       </Row.Content>
     </Row>

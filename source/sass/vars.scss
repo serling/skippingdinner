@@ -3,6 +3,7 @@ $secondary-color: #cdcde6;
 
 $text-font: "Open Sans";
 $heading-font: "Montserrat";
+$handwritten-font: "Gloria Hallelujah";
 
 @mixin heading-font {
   font-family: $heading-font, "sans-serif";
@@ -10,6 +11,10 @@ $heading-font: "Montserrat";
 
 @mixin text-font {
   font-family: $text-font, "sans-serif";
+}
+
+@mixin handwritten-font {
+  font-family: $handwritten-font, "cursive";
 }
 
 @mixin visually-hidden {

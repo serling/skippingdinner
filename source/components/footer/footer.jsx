@@ -10,8 +10,8 @@ const Footer = () => (
     <Row background={Row.backgrounds.secondary}>
       <Row.Content>
         <List isInline={true}>
-          <Link href="https://www.facebook.com/SkippingDinner">
-            <Icon title="fab fa-facebook-square" />
+          <Link href="mailto:skippingdinnerimprov@gmail.com">
+            <Icon title="fas fa-envelope" />
           </Link>
           <Link href="https://www.facebook.com/SkippingDinner">
             <Icon title="fab fa-twitter-square" />

@@ -12,7 +12,7 @@ const App = ({ children, css, js }) => (
         content="Welcome to our tiny, humor-filled corner of the web. We offer a wide range of comedic show formats, whatever the venue or event may be."
       />
       <link
-        href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans"
+        href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Gloria+Hallelujah"
         rel="stylesheet"
       />
       <link

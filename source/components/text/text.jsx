@@ -6,7 +6,8 @@ import Icon from '../icon';
 
 const themes = {
   default: 'default',
-  quote: 'quote'
+  quote: 'quote',
+  handwritten: 'handwritten'
 };
 
 const Text = ({ children, className, theme, quoteSource }) => (
@@ -14,7 +15,7 @@ const Text = ({ children, className, theme, quoteSource }) => (
     className={cn(
       'text',
       {
-        [`text--${themes[theme]}`]: themes[theme],
+        [`text--style-${themes[theme]}`]: themes[theme],
         'text--has-source': quoteSource
       },
       className
