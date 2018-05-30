@@ -3,41 +3,43 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 
 class Transform extends React.Component {
-  state = {
-    rotate: this.props.rotate,
-    scale: this.props.scale,
-    translate: this.props.translate
-  };
-
   isScaled = () => {
-    return this.state.scale !== 1;
+    return this.props.scale !== 1;
   };
 
   isTranslated = () => {
-    return this.state.translate.x || this.state.translate.y;
+    return this.props.translate.x && this.props.translate.y;
   };
 
   isRotated = () => {
-    return this.state.rotate;
+    return this.props.rotate !== 0;
   };
 
+  getRotateStyle = deg => {
+    return deg ? `rotate(${deg}deg) ` : '';
+  };
+
+  getScaleStyle = scale => {
+    return scale ? `scale(${scale}) ` : '';
+  };
+
+  getTranslateStyle = ({ x, y }) => {
+    return x, y ? `translate(${x}, ${y}) ` : '';
+  };
+
+  state = {};
+
+  componentDidMount() {
+    this.setState({
+      transforms: {
+        rotate: this.isRotated() ? this.props.rotate : '',
+        scale: this.isScaled() ? this.props.scale : '',
+        translate: this.isTranslated() ? this.props.translate : ''
+      }
+    });
+  }
+
   render() {
-    let styles = {};
-
-    if (this.isRotated()) {
-      styles.transform += `rotate(${this.state.rotate}deg) `;
-    }
-
-    if (this.isScaled()) {
-      styles.transform += `scale(${this.state.scale}) `;
-    }
-
-    if (this.isTranslated()) {
-      styles.transform += `translate(${this.state.translate.x}, ${
-        this.state.translate.y
-      })`;
-    }
-
     return (
       <div
         className={cn(
@@ -49,7 +51,17 @@ class Transform extends React.Component {
           },
           this.props.className
         )}
-        style={styles}
+        style={
+          this.state.transforms
+            ? {
+                transform: `
+          ${this.getRotateStyle(this.state.transforms.rotate)}
+          ${this.getScaleStyle(this.state.transforms.scale)}
+          ${this.getTranslateStyle({ ...this.state.transforms.translate })}
+          `
+              }
+            : undefined
+        }
       >
         {this.props.children}
       </div>
