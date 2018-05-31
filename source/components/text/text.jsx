@@ -22,7 +22,7 @@ const Text = ({ children, className, theme, quoteSource }) => (
     )}
   >
     {theme === themes.quote && (
-      <Icon title="fas fa-quote-left" size={Icon.sizes.small} />
+      <Icon title="fas fa-quote-left" size={Icon.sizes.medium} />
     )}
     <p className="text__content">{children}</p>
     {quoteSource && <div className="text__source">({quoteSource})</div>}

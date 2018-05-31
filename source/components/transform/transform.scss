@@ -1,4 +1,5 @@
 .transform {
+  $break-at-sm: 40rem;
   transform-origin: top left;
 
   &--is-rotated {
@@ -8,5 +9,8 @@
   }
 
   &--is-translated {
+    @media screen and (max-width: $break-at-sm) {
+      transform: translate(0, 0) !important;
+    }
   }
 }

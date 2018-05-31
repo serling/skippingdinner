@@ -5,7 +5,7 @@ import List from '../list';
 import Row from '../row';
 import Icon from '../icon';
 import Transform from '../transform';
-import Text from '../Text';
+import Text from '../text';
 
 const Footer = () => (
   <div className="footer">
@@ -13,7 +13,7 @@ const Footer = () => (
       <Row.Content>
         <List isInline={true}>
           <Transform rotate={-6}>
-            <Text theme={Text.themes.handwritten}>do it ---></Text>
+            <Text theme={Text.themes.handwritten}>do it:</Text>
           </Transform>
           <Link href="mailto:skippingdinnerimprov@gmail.com">
             <Icon title="fas fa-envelope" />

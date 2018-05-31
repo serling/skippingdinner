@@ -4,7 +4,8 @@ import cn from 'classnames';
 
 const sizes = {
   default: 'default',
-  small: 'small'
+  small: 'small',
+  medium: 'medium'
 };
 
 const vendors = {

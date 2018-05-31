@@ -7,7 +7,7 @@ import Footer from '../footer';
 
 const Page = ({ children, layout }) => (
   <div className="page">
-    <Header active={false} />
+    <Header active={true} />
     <Layout theme={layout}>{children}</Layout>
     <Footer />
   </div>

@@ -1,5 +1,9 @@
 .list {
+  margin-top: 1rem;
+
   &--inline {
+    margin-top: 0;
+
     .list__item {
       display: inline-block;
       margin-right: 1rem;

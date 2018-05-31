@@ -4,6 +4,7 @@ import Page from '../components/page';
 import Heading from '../components/heading';
 import Text from '../components/text';
 import Link from '../components/link';
+import List from '../components/list';
 import Title from '../components/title';
 import Row from '../components/row';
 import Transform from '../components/transform';
@@ -33,6 +34,14 @@ const Home = () => (
             silliness and fun. We perform in both English og norsk. And
             sometimes gibberish.
           </Text>
+
+          <List>
+            <Transform rotate={-2} translate={{ x: '0.5em', y: '0' }}>
+              <Link href="#" icon="—>" theme={Link.themes.handwritten}>
+                check us out
+              </Link>
+            </Transform>
+          </List>
         </div>
       </Row.Content>
     </Row>
@@ -54,7 +63,7 @@ const Home = () => (
     </Row>
     <Row background={Row.backgrounds.primary}>
       <Row.Content>
-        <Text theme={Text.themes.quote} quoteSource="HR, Shortcut">
+        <Text theme={Text.themes.quote} quoteSource="lady name, Shortcut">
           The fact that the themes linked the corporate world and comedy
           together, was a magnificent reinforcement of the vital role humour
           plays within the workplace. The improv comedy session created some
@@ -82,6 +91,18 @@ const Home = () => (
             />
           </Text>
         </div>
+      </Row.Content>
+    </Row>
+    <Row>
+      <Row.Content column={Row.columns.two}>
+        <List>
+          <Link href="#" icon="➞">
+            <span className="link--style-handwritten link--style-strikethrough">
+              Testies over yonder
+            </span>{' '}
+            <span className="link--style-defasult">testimonials</span>
+          </Link>
+        </List>
       </Row.Content>
     </Row>
   </Page>

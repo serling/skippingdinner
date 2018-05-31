@@ -4,7 +4,8 @@ import cn from 'classnames';
 
 const themes = {
   default: 'default',
-  underlined: 'underlined'
+  underlined: 'underlined',
+  handwritten: 'handwritten'
 };
 
 const Link = ({ children, className, icon, text, href, theme }) => (
@@ -12,7 +13,7 @@ const Link = ({ children, className, icon, text, href, theme }) => (
     className={cn(
       'link',
       {
-        [`link--${themes[theme]}`]: themes[theme]
+        [`link--style-${themes[theme]}`]: themes[theme]
       },
       className
     )}
