@@ -35,7 +35,7 @@ Text.propTypes = {
     PropTypes.node,
     PropTypes.arrayOf(PropTypes.node)
   ]).isRequired,
-  theme: PropTypes.string,
+  theme: PropTypes.oneOf(Object.keys(themes).map(key => themes[key])),
   quoteSource: PropTypes.string
 };
 

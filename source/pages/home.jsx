@@ -8,6 +8,7 @@ import List from '../components/list';
 import Title from '../components/title';
 import Row from '../components/row';
 import Transform from '../components/transform';
+import Snippet from '../components/snippet';
 
 const Home = () => (
   <Page>
@@ -16,7 +17,7 @@ const Home = () => (
         <div>
           <Title>Skipping Dinner Improv</Title>
           <Transform rotate={4} translate={{ x: '15rem', y: '-2.5rem' }}>
-            <Text theme={Text.themes.handwritten}>we make comedy</Text>
+            <Snippet theme={Snippet.themes.handwritten}>we make comedy</Snippet>
           </Transform>
         </div>
       </Row.Content>
@@ -56,7 +57,7 @@ const Home = () => (
             stand-up, and presentations. Great for bringing friends together
             outside or in the workplace — at a conference, event or party. You
             might even learn a little something about yourself.{' '}
-            <span className="text--style-handwritten">Or not...</span>
+            <Snippet theme={Snippet.themes.handwritten}>Or not...</Snippet>
           </Text>
         </div>
       </Row.Content>
@@ -75,8 +76,7 @@ const Home = () => (
       <Row.Content column={Row.columns.two}>
         <div>
           <Heading>
-            How can we <span className="heading__crooked">make</span> this
-            happen?
+            How can we <Transform rotate={-5}>make</Transform> this happen?
           </Heading>
           <Text>
             Our business is flexible by nature. We do the heavy lifting, whether
@@ -96,11 +96,13 @@ const Home = () => (
     <Row>
       <Row.Content column={Row.columns.two}>
         <List>
-          <Link href="#" icon="➞">
-            <span className="link--style-handwritten link--style-strikethrough">
+          <Transform rotate={-6}>
+            <Snippet theme={Snippet.themes.handwritten}>
               Testies over yonder
-            </span>{' '}
-            <span className="link--style-defasult">testimonials</span>
+            </Snippet>
+          </Transform>
+          <Link href="#" icon="➞">
+            Testimonials
           </Link>
         </List>
       </Row.Content>

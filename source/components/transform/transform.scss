@@ -1,6 +1,7 @@
 .transform {
   $break-at-sm: 40rem;
   transform-origin: top left;
+  display: inline-block;
 
   &--is-rotated {
   }

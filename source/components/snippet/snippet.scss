@@ -1,0 +1,8 @@
+.snippet {
+  &--style-handwritten {
+    @include handwritten-font;
+    color: $tertiary-color;
+    font-size: 1.4rem;
+    line-height: 1;
+  }
+}
