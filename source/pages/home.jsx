@@ -35,14 +35,11 @@ const Home = () => (
             silliness and fun. We perform in both English og norsk. And
             sometimes gibberish.
           </Text>
-
-          <List>
-            <Transform rotate={-2} translate={{ x: '0.5em', y: '0' }}>
-              <Link href="#" icon="—>" theme={Link.themes.handwritten}>
-                check us out
-              </Link>
-            </Transform>
-          </List>
+          <Transform rotate={-2} translate={{ x: '0.5em', y: '0' }}>
+            <Link href="#" icon="—>" theme={Link.themes.handwritten}>
+              check us out
+            </Link>
+          </Transform>
         </div>
       </Row.Content>
     </Row>
@@ -90,12 +87,18 @@ const Home = () => (
               theme={Link.themes.underlined}
             />
           </Text>
+          <Link href="#testimonials" theme={Link.themes.button} icon="➞">
+            Testimonials
+          </Link>
         </div>
       </Row.Content>
     </Row>
     <Row>
       <Row.Content column={Row.columns.two}>
-        <List>
+        {/* <List>
+          <Link href="#testimonials" theme={Link.themes.button} icon="➞">
+            Testimonials
+          </Link>
           <Transform rotate={-6}>
             <Snippet theme={Snippet.themes.handwritten}>
               Testies over yonder
@@ -104,7 +107,7 @@ const Home = () => (
           <Link href="#" icon="➞">
             Testimonials
           </Link>
-        </List>
+        </List> */}
       </Row.Content>
     </Row>
   </Page>

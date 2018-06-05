@@ -5,7 +5,8 @@ import cn from 'classnames';
 const themes = {
   default: 'default',
   underlined: 'underlined',
-  handwritten: 'handwritten'
+  handwritten: 'handwritten',
+  button: 'button'
 };
 
 const Link = ({ children, className, icon, text, href, theme }) => (
