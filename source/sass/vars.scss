@@ -1,6 +1,12 @@
+$white-color: white;
+$black-color: black;
+
 $primary-color: #daf7d0;
 $secondary-color: #d3d3d3;
 $tertiary-color: #b54b4b;
+
+$button-color: #e83470;
+$button-color--dark: #ad194a;
 
 $text-font: "Open Sans";
 $heading-font: "Montserrat";
@@ -16,6 +22,22 @@ $handwritten-font: "Gloria Hallelujah";
 
 @mixin handwritten-font {
   font-family: $handwritten-font, "cursive";
+}
+
+@mixin primary-button {
+  min-width: 15rem;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  background-color: $button-color;
+  color: $white-color;
+  text-align: center;
+  border: 1px solid $button-color--dark;
+  font-size: 1.4rem;
+  display: inline-block;
+
+  &:hover {
+    background-color: $button-color--dark;
+  }
 }
 
 @mixin visually-hidden {

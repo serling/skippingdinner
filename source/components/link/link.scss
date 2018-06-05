@@ -17,13 +17,7 @@
   }
 
   &--style-button {
-    padding: 0.5rem 1rem;
-    margin: 2rem 0;
-    background-color: $primary-color;
-    text-align: center;
-    border: 1px solid #d2cece;
-    font-size: 1.4rem;
-    display: inline-block;
+    @include primary-button;
 
     .link__icon {
       vertical-align: top;

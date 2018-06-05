@@ -3,7 +3,9 @@ import cn from 'classnames';
 import PropTypes from 'prop-types';
 
 const themes = {
-  handwritten: 'handwritten'
+  handwritten: 'handwritten',
+  slanted: 'slanted',
+  bloated: 'bloated'
 };
 
 const Snippet = ({ children, className, theme }) => (

@@ -3,45 +3,80 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 
 import Row from '../row';
+import Link from '../link';
+import List from '../list';
+import Icon from '../icon';
+import Button from '../button';
 
 class Header extends React.Component {
   state = {
-    isMenuCollapsed: this.props.isMenuCollapsed
+    isMenuOpen: this.props.isMenuOpen
   };
 
   handleOnClick() {
     this.setState({
-      isMenuCollapsed: !this.state.isMenuCollapsed
+      isMenuOpen: !this.state.isMenuOpen
     });
   }
 
   render() {
     return (
-      <div className="header">
-        {!this.state.isMenuCollapsed && (
+      <div
+        className={cn('header', {
+          'header--is-open': this.state.isMenuOpen
+        })}
+      >
+        {!this.state.isMenuOpen && (
           <div className="header__content">
-            <button
+            <Button
               onClick={() => this.handleOnClick()}
+              theme={Button.themes.text}
               className="header__button"
             >
               MENU
-            </button>
+            </Button>
           </div>
         )}
-        {this.state.isMenuCollapsed && (
-          <Row className="header__menu" background={Row.backgrounds.primary}>
+        {this.state.isMenuOpen && (
+          <Row
+            className={cn('header__menu', {
+              'header__menu--is-visible': this.state.isMenuOpen
+            })}
+            background={Row.backgrounds.primary}
+          >
             <div className="header__content">
-              <button
+              <Button
                 onClick={() => this.handleOnClick()}
+                theme={Button.themes.text}
                 className="header__button"
               >
-                MENU
-              </button>
+                X
+              </Button>
             </div>
-            <Row.Content column={Row.columns.three}>
-              <div className="header__section">All the stuff</div>
-              <div className="header__section">All the more stuff</div>
-              <div className="header__section">All the last stuff</div>
+            <Row.Content column={Row.columns.two}>
+              <div className="header__navigation">
+                <List>
+                  <Link icon="➞" href="#testimonials">
+                    Testimonials
+                  </Link>
+                  <Link icon="➞" href="#who">
+                    Who are we
+                  </Link>
+                  <Link icon="➞" href="#what">
+                    What we do
+                  </Link>
+                </List>
+              </div>
+              <div className="header__socialmedia">
+                <List isInline={true}>
+                  <Link href="mailto:skippingdinnerimprov@gmail.com">
+                    <Icon title="fas fa-envelope" />
+                  </Link>
+                  <Link href="https://www.facebook.com/SkippingDinner">
+                    <Icon title="fab fa-facebook-square" />
+                  </Link>
+                </List>
+              </div>
             </Row.Content>
           </Row>
         )}
@@ -51,7 +86,7 @@ class Header extends React.Component {
 }
 
 Header.propTypes = {
-  isMenuCollapsed: PropTypes.bool
+  isMenuOpen: PropTypes.bool
 };
 
 export default Header;

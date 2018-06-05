@@ -5,4 +5,12 @@
     font-size: 1.4rem;
     line-height: 1;
   }
+
+  &--style-slanted {
+    font-style: italic;
+  }
+
+  &--style-bloated {
+    font-size: 1.3em;
+  }
 }

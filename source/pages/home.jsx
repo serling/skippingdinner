@@ -15,7 +15,7 @@ const Home = () => (
     <Row>
       <Row.Content>
         <div>
-          <Title>Skipping Dinner Improv</Title>
+          <Title>Skipping Dinner</Title>
           <Transform rotate={4} translate={{ x: '15rem', y: '-2.5rem' }}>
             <Snippet theme={Snippet.themes.handwritten}>we make comedy</Snippet>
           </Transform>
@@ -26,7 +26,7 @@ const Home = () => (
       <Row.Content column={Row.columns.two}>
         <div>
           <Heading>
-            Who <span className="heading__italic">are</span> we?
+            Who <Snippet theme={Snippet.themes.slanted}>are</Snippet> we?
           </Heading>
           <Text>
             We are a group of versatile Norwegian improvisers and comedians born
@@ -47,7 +47,7 @@ const Home = () => (
       <Row.Content column={Row.columns.two}>
         <div>
           <Heading>
-            What's our <span className="heading__bloated">deal</span>?
+            What's our <Snippet theme={Snippet.themes.bloated}>deal</Snippet>?
           </Heading>
           <Text>
             We offer tailored comedy shows, primarily through improv theater,
@@ -79,23 +79,28 @@ const Home = () => (
             Our business is flexible by nature. We do the heavy lifting, whether
             you need a 30-minute spot next month or a full evening of comedy
             this coming week. Send us a message or buy us a cup of coffee.
-            Either way,{' '}
-            <Link
+            Either way, lets talk!
+            {/* <Link
               href="mailto:skippingdinnerimprov@gmail.com"
               text="let's talk"
               icon="➞"
               theme={Link.themes.underlined}
-            />
+            /> */}
           </Text>
-          <Link href="#testimonials" theme={Link.themes.button} icon="➞">
-            Testimonials
-          </Link>
+          <List>
+            <Link href="#testimonials" theme={Link.themes.button} icon="➞">
+              Contact us
+            </Link>
+            <Link href="#testimonials" theme={Link.themes.button} icon="➞">
+              Testimonials
+            </Link>
+          </List>
         </div>
       </Row.Content>
     </Row>
-    <Row>
+    {/* <Row>
       <Row.Content column={Row.columns.two}>
-        {/* <List>
+        <List>
           <Link href="#testimonials" theme={Link.themes.button} icon="➞">
             Testimonials
           </Link>
@@ -107,9 +112,9 @@ const Home = () => (
           <Link href="#" icon="➞">
             Testimonials
           </Link>
-        </List> */}
+        </List>
       </Row.Content>
-    </Row>
+    </Row> */}
   </Page>
 );
 
