@@ -12,16 +12,6 @@ import Snippet from '../components/snippet';
 
 const Home = () => (
   <Page>
-    {/* <Row>
-      <Row.Content>
-        <div>
-          <Title>Skipping Dinner</Title>
-          <Transform rotate={4} translate={{ x: '15rem', y: '-2.5rem' }}>
-            <Snippet theme={Snippet.themes.handwritten}>we make comedy</Snippet>
-          </Transform>
-        </div>
-      </Row.Content>
-    </Row> */}
     <Row>
       <Row.Content column={Row.columns.two}>
         <div>
@@ -83,14 +73,8 @@ const Home = () => (
           <Text>
             Our business is flexible by nature. We do the heavy lifting, whether
             you need a 30-minute spot next month or a full evening of comedy
-            this coming week. Send us a message or buy us a cup of coffee.
-            Either way, lets talk!
-            {/* <Link
-              href="mailto:skippingdinnerimprov@gmail.com"
-              text="let's talk"
-              icon="➞"
-              theme={Link.themes.underlined}
-            /> */}
+            this coming week. Send us a message or invite us for a cup of
+            coffee. Either way, lets talk!
           </Text>
           <List>
             <Link href="#contact" theme={Link.themes.button} icon="➞">
@@ -100,23 +84,6 @@ const Home = () => (
         </div>
       </Row.Content>
     </Row>
-    {/* <Row>
-      <Row.Content column={Row.columns.two}>
-        <List>
-          <Link href="#testimonials" theme={Link.themes.button} icon="➞">
-            Testimonials
-          </Link>
-          <Transform rotate={-6}>
-            <Snippet theme={Snippet.themes.handwritten}>
-              Testies over yonder
-            </Snippet>
-          </Transform>
-          <Link href="#" icon="➞">
-            Testimonials
-          </Link>
-        </List>
-      </Row.Content>
-    </Row> */}
   </Page>
 );
 

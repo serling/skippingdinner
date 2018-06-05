@@ -23,11 +23,7 @@ class Header extends React.Component {
           <div className="header__logo">
             <Title>Skipping Dinner</Title>
             {this.state.isMenuOpen && (
-              <Transform
-                rotate={4}
-                translate={{ x: '6rem', y: '-1rem' }}
-                style={{ position: 'absolute' }}
-              >
+              <Transform rotate={4} translate={{ x: '6rem', y: '-1rem' }}>
                 <Snippet theme={Snippet.themes.handwritten}>
                   we make comedy
                 </Snippet>
@@ -70,7 +66,7 @@ class Header extends React.Component {
               })}
               background={Row.backgrounds.primary}
             >
-              <Row.Content column={Row.columns.two}>
+              <Row.Content>
                 <div className="header__navigation">
                   <List>
                     <Link icon="➞" href="#testimonials">
@@ -84,16 +80,6 @@ class Header extends React.Component {
                     </Link>
                     <Link icon="🕭" href="#notify">
                       Get notification
-                    </Link>
-                  </List>
-                </div>
-                <div className="header__socialmedia">
-                  <List isInline={true}>
-                    <Link href="mailto:skippingdinnerimprov@gmail.com">
-                      <Icon title="fas fa-envelope" />
-                    </Link>
-                    <Link href="https://www.facebook.com/SkippingDinner">
-                      <Icon title="fab fa-facebook-square" />
                     </Link>
                   </List>
                 </div>

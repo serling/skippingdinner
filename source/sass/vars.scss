@@ -12,6 +12,9 @@ $text-font: "Open Sans";
 $heading-font: "Montserrat";
 $handwritten-font: "Gloria Hallelujah";
 
+$break-at-sm: 40rem;
+$break-at-md: 50rem;
+
 @mixin heading-font {
   font-family: $heading-font, "sans-serif";
 }
@@ -25,7 +28,6 @@ $handwritten-font: "Gloria Hallelujah";
 }
 
 @mixin primary-button {
-  min-width: 15rem;
   padding: 0.5rem 1rem;
   margin: 1rem 0;
   background-color: $button-color;
@@ -34,6 +36,10 @@ $handwritten-font: "Gloria Hallelujah";
   border: 1px solid $button-color--dark;
   font-size: 1.4rem;
   display: inline-block;
+
+  @media screen and (min-width: $break-at-sm) {
+    min-width: 15rem;
+  }
 
   &:hover {
     background-color: $button-color--dark;
