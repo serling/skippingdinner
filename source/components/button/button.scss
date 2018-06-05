@@ -1,4 +1,6 @@
 .button {
+  $break-at-sm: 40rem;
+
   @include text-font;
   min-width: 4rem;
   background-color: transparent;
@@ -10,5 +12,9 @@
   }
 
   &--style-text {
+    @media screen and (min-width: $break-at-sm) {
+      min-width: auto;
+      text-align: left;
+    }
   }
 }

@@ -86,7 +86,8 @@ Transform.propTypes = {
   translate: PropTypes.shape({
     x: PropTypes.string.isRequired,
     y: PropTypes.string.isRequired
-  })
+  }),
+  style: PropTypes.object
 };
 
 export default Transform;

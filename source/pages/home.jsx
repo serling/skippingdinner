@@ -5,14 +5,14 @@ import Heading from '../components/heading';
 import Text from '../components/text';
 import Link from '../components/link';
 import List from '../components/list';
-import Title from '../components/title';
+// import Title from '../components/title';
 import Row from '../components/row';
 import Transform from '../components/transform';
 import Snippet from '../components/snippet';
 
 const Home = () => (
   <Page>
-    <Row>
+    {/* <Row>
       <Row.Content>
         <div>
           <Title>Skipping Dinner</Title>
@@ -21,7 +21,7 @@ const Home = () => (
           </Transform>
         </div>
       </Row.Content>
-    </Row>
+    </Row> */}
     <Row>
       <Row.Content column={Row.columns.two}>
         <div>
@@ -56,6 +56,11 @@ const Home = () => (
             might even learn a little something about yourself.{' '}
             <Snippet theme={Snippet.themes.handwritten}>Or not...</Snippet>
           </Text>
+          <List>
+            <Link href="#testimonials" theme={Link.themes.button} icon="➞">
+              Testimonials
+            </Link>
+          </List>
         </div>
       </Row.Content>
     </Row>
@@ -88,11 +93,8 @@ const Home = () => (
             /> */}
           </Text>
           <List>
-            <Link href="#testimonials" theme={Link.themes.button} icon="➞">
+            <Link href="#contact" theme={Link.themes.button} icon="➞">
               Contact us
-            </Link>
-            <Link href="#testimonials" theme={Link.themes.button} icon="➞">
-              Testimonials
             </Link>
           </List>
         </div>

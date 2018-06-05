@@ -7,10 +7,44 @@ import Link from '../link';
 import List from '../list';
 import Icon from '../icon';
 import Button from '../button';
+import Title from '../title';
+import Transform from '../transform';
+import Snippet from '../snippet';
 
 class Header extends React.Component {
   state = {
     isMenuOpen: this.props.isMenuOpen
+  };
+
+  Bar = ({ buttonText }) => {
+    return (
+      <Row>
+        <Row.Content column={Row.columns.two}>
+          <div className="header__logo">
+            <Title>Skipping Dinner</Title>
+            {this.state.isMenuOpen && (
+              <Transform
+                rotate={4}
+                translate={{ x: '6rem', y: '-1rem' }}
+                style={{ position: 'absolute' }}
+              >
+                <Snippet theme={Snippet.themes.handwritten}>
+                  we make comedy
+                </Snippet>
+              </Transform>
+            )}
+          </div>
+          <div className="header__button">
+            <Button
+              onClick={() => this.handleOnClick()}
+              theme={Button.themes.text}
+            >
+              {buttonText}
+            </Button>
+          </div>
+        </Row.Content>
+      </Row>
+    );
   };
 
   handleOnClick() {
@@ -26,59 +60,46 @@ class Header extends React.Component {
           'header--is-open': this.state.isMenuOpen
         })}
       >
-        {!this.state.isMenuOpen && (
-          <div className="header__content">
-            <Button
-              onClick={() => this.handleOnClick()}
-              theme={Button.themes.text}
-              className="header__button"
-            >
-              MENU
-            </Button>
-          </div>
-        )}
+        {!this.state.isMenuOpen && <this.Bar buttonText="MENU" />}
         {this.state.isMenuOpen && (
-          <Row
-            className={cn('header__menu', {
-              'header__menu--is-visible': this.state.isMenuOpen
-            })}
-            background={Row.backgrounds.primary}
-          >
-            <div className="header__content">
-              <Button
-                onClick={() => this.handleOnClick()}
-                theme={Button.themes.text}
-                className="header__button"
-              >
-                X
-              </Button>
-            </div>
-            <Row.Content column={Row.columns.two}>
-              <div className="header__navigation">
-                <List>
-                  <Link icon="➞" href="#testimonials">
-                    Testimonials
-                  </Link>
-                  <Link icon="➞" href="#who">
-                    Who are we
-                  </Link>
-                  <Link icon="➞" href="#what">
-                    What we do
-                  </Link>
-                </List>
-              </div>
-              <div className="header__socialmedia">
-                <List isInline={true}>
-                  <Link href="mailto:skippingdinnerimprov@gmail.com">
-                    <Icon title="fas fa-envelope" />
-                  </Link>
-                  <Link href="https://www.facebook.com/SkippingDinner">
-                    <Icon title="fab fa-facebook-square" />
-                  </Link>
-                </List>
-              </div>
-            </Row.Content>
-          </Row>
+          <React.Fragment>
+            <this.Bar buttonText="X" />
+            <Row
+              className={cn('header__menu', {
+                'header__menu--is-visible': this.state.isMenuOpen
+              })}
+              background={Row.backgrounds.primary}
+            >
+              <Row.Content column={Row.columns.two}>
+                <div className="header__navigation">
+                  <List>
+                    <Link icon="➞" href="#testimonials">
+                      Testimonials
+                    </Link>
+                    <Link icon="➞" href="#who">
+                      Who are we
+                    </Link>
+                    <Link icon="➞" href="#what">
+                      What we do
+                    </Link>
+                    <Link icon="🕭" href="#notify">
+                      Get notification
+                    </Link>
+                  </List>
+                </div>
+                <div className="header__socialmedia">
+                  <List isInline={true}>
+                    <Link href="mailto:skippingdinnerimprov@gmail.com">
+                      <Icon title="fas fa-envelope" />
+                    </Link>
+                    <Link href="https://www.facebook.com/SkippingDinner">
+                      <Icon title="fab fa-facebook-square" />
+                    </Link>
+                  </List>
+                </div>
+              </Row.Content>
+            </Row>
+          </React.Fragment>
         )}
       </div>
     );
