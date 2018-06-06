@@ -6,6 +6,7 @@ import Row from '../row';
 import Link from '../link';
 import List from '../list';
 import Icon from '../icon';
+import ContactBlock from '../contact-block';
 import Button from '../button';
 import Title from '../title';
 import Transform from '../transform';
@@ -66,22 +67,26 @@ class Header extends React.Component {
               })}
               background={Row.backgrounds.primary}
             >
-              <Row.Content>
+              <Row.Content column={Row.columns.two}>
                 <div className="header__navigation">
                   <List>
-                    <Link icon="➞" href="#testimonials">
+                    <Link
+                      icon="➞"
+                      href="#testimonials"
+                      theme={Link.themes.button}
+                    >
                       Testimonials
                     </Link>
-                    <Link icon="➞" href="#who">
-                      Who are we
+                    <Link icon="➞" href="#who" theme={Link.themes.button}>
+                      The people
                     </Link>
-                    <Link icon="➞" href="#what">
-                      What we do
-                    </Link>
-                    <Link icon="🕭" href="#notify">
-                      Get notification
+                    <Link href="#contact" theme={Link.themes.button} icon="➞">
+                      Contact us
                     </Link>
                   </List>
+                </div>
+                <div className="header__navigation">
+                  <ContactBlock />
                 </div>
               </Row.Content>
             </Row>

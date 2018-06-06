@@ -5,7 +5,6 @@ import Heading from '../components/heading';
 import Text from '../components/text';
 import Link from '../components/link';
 import List from '../components/list';
-// import Title from '../components/title';
 import Row from '../components/row';
 import Transform from '../components/transform';
 import Snippet from '../components/snippet';
