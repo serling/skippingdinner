@@ -16,12 +16,10 @@ class Background extends React.Component {
 
   render() {
     return (
-      <div className="background">
-        <div
-          className="background__image"
-          style={{ backgroundImage: 'url(' + this.state.imageSrc + ')' }}
-        />
-      </div>
+      <div
+        className="background"
+        style={{ backgroundImage: 'url(' + this.state.imageSrc + ')' }}
+      />
     );
   }
 }

@@ -8,6 +8,7 @@ import List from '../components/list';
 import Row from '../components/row';
 import Transform from '../components/transform';
 import Snippet from '../components/snippet';
+import Background from '../components/background';
 
 const Home = () => (
   <Page>
@@ -34,6 +35,11 @@ const Home = () => (
     </Row>
     <Row>
       <Row.Content column={Row.columns.two}>
+        <div>
+          <Transform translate={{ x: '-24rem', y: 'calc(6rem + 5px)' }}>
+            <Background imageSrc={'../assets/more-people.jpg'} />
+          </Transform>
+        </div>
         <div>
           <Heading>
             What's our <Snippet theme={Snippet.themes.bloated}>deal</Snippet>?
