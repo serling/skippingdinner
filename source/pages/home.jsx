@@ -36,7 +36,7 @@ const Home = () => (
     <Row>
       <Row.Content column={Row.columns.two}>
         <div>
-          <Transform translate={{ x: '-24rem', y: 'calc(6rem + 5px)' }}>
+          <Transform translate={{ x: '-24rem', y: 'calc(6rem + 4px)' }}>
             <Background imageSrc={'../assets/more-people.jpg'} />
           </Transform>
         </div>
@@ -61,7 +61,10 @@ const Home = () => (
     </Row>
     <Row background={Row.backgrounds.primary}>
       <Row.Content>
-        <Text theme={Text.themes.quote} quoteSource="lady name, Shortcut">
+        <Text
+          theme={Text.themes.quote}
+          quoteSource="Petter Holstad Wright, Shortcut"
+        >
           The fact that the themes linked the corporate world and comedy
           together, was a magnificent reinforcement of the vital role humour
           plays within the workplace. The improv comedy session created some

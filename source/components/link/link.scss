@@ -5,15 +5,8 @@
   font-size: 1.2rem;
 
   &__icon {
-    transition: all 0.1s ease-out;
     vertical-align: middle;
-    margin-left: 0.15em;
-  }
-
-  &:hover {
-    .link__icon {
-      margin-left: 0.5em;
-    }
+    margin-left: 0.5em;
   }
 
   &--style-button {
@@ -21,12 +14,6 @@
 
     .link__icon {
       vertical-align: top;
-    }
-
-    &:hover {
-      .link__icon {
-        margin-left: 0.15em;
-      }
     }
   }
 
@@ -42,12 +29,6 @@
 
     .link__icon {
       margin-left: 0.5em;
-    }
-
-    &:hover {
-      .link__icon {
-        margin-left: 1em;
-      }
     }
   }
 

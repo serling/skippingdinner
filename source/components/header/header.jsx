@@ -74,13 +74,13 @@ class Header extends React.Component {
                   <List>
                     <Link
                       icon="➞"
-                      href="#testimonials"
+                      href="#performers"
                       theme={Link.themes.button}
                     >
-                      Testimonials
+                      The performers
                     </Link>
-                    <Link icon="➞" href="#who" theme={Link.themes.button}>
-                      The people
+                    <Link icon="➞" href="#testies" theme={Link.themes.button}>
+                      Testimonials
                     </Link>
                     <Link href="#contact" theme={Link.themes.button} icon="➞">
                       Contact us
