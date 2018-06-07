@@ -46,6 +46,7 @@
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-motion": "^0.5.2",
+    "react-tiny-transition": "^2.2.5",
     "resolve-url-loader": "^2.0.2",
     "sass-loader": "^7.0.1",
     "static-site-generator-webpack-plugin": "^3.4.1",

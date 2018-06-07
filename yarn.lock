@@ -6070,6 +6070,10 @@ react-motion@^0.5.2:
     prop-types "^15.5.8"
     raf "^3.1.0"
 
+react-tiny-transition@^2.2.5:
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/react-tiny-transition/-/react-tiny-transition-2.2.5.tgz#d046ecdf92cf61a9bf6cadbeb02bcddc73fff233"
+
 react@^16.1.1:
   version "16.3.2"
   resolved "https://registry.yarnpkg.com/react/-/react-16.3.2.tgz#fdc8420398533a1e58872f59091b272ce2f91ea9"

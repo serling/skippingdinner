@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
+import TinyTransition from 'react-tiny-transition';
 
 import Row from '../row';
 import Link from '../link';
@@ -17,13 +18,13 @@ class Header extends React.Component {
     isMenuOpen: this.props.isMenuOpen
   };
 
-  Bar = ({ buttonText }) => {
+  Bar = ({ closeButton, isMenuOpen }) => {
     return (
       <Row>
         <Row.Content column={Row.columns.two}>
           <div className="header__logo">
             <Title>Skipping Dinner</Title>
-            {this.state.isMenuOpen && (
+            {isMenuOpen && (
               <Transform rotate={4} translate={{ x: '6rem', y: '-1rem' }}>
                 <Snippet theme={Snippet.themes.handwritten}>
                   we make comedy
@@ -36,7 +37,10 @@ class Header extends React.Component {
               onClick={() => this.handleOnClick()}
               theme={Button.themes.text}
             >
-              {buttonText}
+              <Icon
+                title={closeButton ? 'fas fa-times' : 'fas fa-bars'}
+                size={Icon.sizes.small}
+              />
             </Button>
           </div>
         </Row.Content>
@@ -57,18 +61,16 @@ class Header extends React.Component {
           'header--is-open': this.state.isMenuOpen
         })}
       >
-        {!this.state.isMenuOpen && <this.Bar buttonText="MENU" />}
-        {this.state.isMenuOpen && (
-          <React.Fragment>
-            <this.Bar buttonText="X" />
-            <Row
-              className={cn('header__menu', {
-                'header__menu--is-visible': this.state.isMenuOpen
-              })}
-              background={Row.backgrounds.primary}
-            >
-              <Row.Content column={Row.columns.two}>
-                <div className="header__navigation">
+        <this.Bar />
+        <TinyTransition duration={500}>
+          {this.state.isMenuOpen && (
+            <div className="header__content">
+              <this.Bar closeButton={true} isMenuOpen={this.state.isMenuOpen} />
+              <Row
+                className="header__menu"
+                background={Row.backgrounds.secondary}
+              >
+                <Row.Content column={Row.columns.two}>
                   <List>
                     <Link
                       icon="➞"
@@ -84,14 +86,12 @@ class Header extends React.Component {
                       Contact us
                     </Link>
                   </List>
-                </div>
-                <div className="header__navigation">
                   <ContactBlock />
-                </div>
-              </Row.Content>
-            </Row>
-          </React.Fragment>
-        )}
+                </Row.Content>
+              </Row>
+            </div>
+          )}
+        </TinyTransition>
       </div>
     );
   }
