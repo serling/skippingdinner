@@ -9,7 +9,7 @@ const ContactBlock = () => (
     <List>
       <div>Chateu Neuf @ Majorstua, Oslo</div>
       <div>skippingdinnerimprov@gmail.com</div>
-      <div>(+47) 123 888 23</div>
+      <div>(+47) 123 XXX 23</div>
     </List>
     <List isInline={true}>
       <Link href="mailto:skippingdinnerimprov@gmail.com">
