@@ -35,11 +35,11 @@ const Home = () => (
     </Row>
     <Row>
       <Row.Content column={Row.columns.two}>
-        <div>
+        {/* <div>
           <Transform translate={{ x: '-24rem', y: 'calc(6rem + 4px)' }}>
             <Background imageSrc={'../assets/more-people.jpg'} />
           </Transform>
-        </div>
+        </div> */}
         <div>
           <Heading>
             What's our <Snippet theme={Snippet.themes.bloated}>deal</Snippet>?
