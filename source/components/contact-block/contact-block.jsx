@@ -2,7 +2,6 @@ import React from 'react';
 
 import Link from '../link';
 import List from '../list';
-
 import Icon from '../icon';
 
 const ContactBlock = () => (
