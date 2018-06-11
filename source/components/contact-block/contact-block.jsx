@@ -8,7 +8,7 @@ const ContactBlock = () => (
   <div className="contact-block">
     <List>
       <div>Chateu Neuf @ Majorstua, Oslo</div>
-      <div>skippingdinnerimprov@gmail.com</div>
+      <div>skippingdinnerimprov</div>
       <div>(+47) 123 XXX 23</div>
     </List>
     <List isInline={true}>

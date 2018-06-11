@@ -23,7 +23,7 @@ class Header extends React.Component {
       <Row>
         <Row.Content column={Row.columns.two}>
           <div className="header__logo">
-            <Title>humorfolk</Title>
+            <Title>Humorfolk</Title>
             {isMenuOpen && (
               <Transform rotate={4} translate={{ x: '6rem', y: '-1rem' }}>
                 <Snippet theme={Snippet.themes.handwritten}>
