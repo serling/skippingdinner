@@ -8,6 +8,7 @@ import List from '../components/list';
 import Row from '../components/row';
 import Transform from '../components/transform';
 import Snippet from '../components/snippet';
+
 // import Background from '../components/background';
 
 const Home = () => (
